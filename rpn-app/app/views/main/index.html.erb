@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <h1 class="text-center">RPN</h1>
+            <div class="row">
+                <div class="col-md-6 no-float">
+                    <%= form_tag(controller: "main", action: "parse") do %>
+                    <div class="form-group">
+                        <label for="input">Input</label>
+                        <textarea class="form-control" id="input" name="input" rows="10" placeholder="2&#13;&#10;2 21 * 30-&#13;&#10;1 2 3 4 5 6 7 8 9 10+++++++++"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info">Calculate</button>
+                    <% end %>
+                </div>
+                <div class="col-md-6 no-float">
+                    <div class="form-group">
+                        <label for="input-info">&nbsp</label>
+                        <textarea class="form-control" id="input-info" rows="10" readonly>N - number of input expressions to solve&#13;&#10;X1 - RPN expression to evaluate, separated by \n&#13;&#10;X2&#13;&#10;Xn</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
